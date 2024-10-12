@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: white; /* Initial background color */
+    color: black; /* Initial text color */
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem; /* Keep padding for left and right */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    margin-right: 20px; /* Move the content to the left by adjusting right margin */
+}
+
+nav ul li {
+    flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+nav ul li a {
+    color: black; /* Changed text color to black for visibility */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Keep hover effect */
+}
+
+main {
+    padding: 2rem;
+    margin-top: 60px;
+}
+
+.social-sidebar {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 999;
+    background-color: transparent; /* Fully transparent background */
+    border: 2px solid black; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding around the icons */
+}
+
+.social-sidebar a {
+    color: #333;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-sidebar a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+#home {
+    height: 100vh; /* Set height to full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Added position relative for absolute positioning of the image */
+}
+
+#about {
+    padding: 4rem 2rem;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.photo-container {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.profile-photo {
+    width: 80%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.about-text {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.about-text h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 1rem; /* Space below heading */
+    color: rgb(0, 115, 206); /* Text color for heading */
+}
+
+.about-text p {
+    font-size: 1.2rem; /* Adjust paragraph size */
+    line-height: 1.6; /* Line height for readability */
+    color: rgb(0, 115, 206); /* Text color for paragraphs */
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0; /* Center the content */
+    position: relative; /* Added position relative for proper stacking */
+    z-index: 1; /* Ensure text is above the image */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white; /* Text color for hero section */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: white; /* Text color for hero section */
+}
+
+.home-bg {
+    position: absolute; /* Position the image absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Cover the entire section */
+    height: 100%; /* Cover the entire section */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    z-index: 0; /* Send the image behind the text */
+}
+
+#education {
+    padding: 4rem 2rem;
+    background-image: url('blue_bg.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    color: white; /* Text color for the education section */
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    position: relative; /* Position relative for absolute positioning of lines */
+}
+
+.degree {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem;
+    margin: 1rem 0; /* Space between degrees */
+    width: 300px; /* Fixed width for degree boxes */
+    text-align: center; /* Center text */
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+.degree h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Heading size */
+}
+
+.degree-details p {
+    margin: 0.5rem 0; /* Space between details */
+}
+
+/* Create lines connecting the degrees */
+.degree::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -20px; /* Position above the degree box */
+    width: 2px; /* Line width */
+    height: 20px; /* Line height */
+    background-color: rgba(255, 255, 255, 0.3); /* Line color */
+    transform: translateX(-50%); /* Center the line */
+}
+
+.degree:first-child::before {
+    display: none; /* No line above the top degree */
+}
+
+.skills-section {
+    grid-column: span 1;
+    grid-row: 2;
+}
+
+.skills-section h2 {
+    font-size: 1.8rem; /* Heading size for skills */
+    margin-bottom: 1rem; /* Space below heading */
+    color: rgb(0, 115, 206); /* Text color for skills section headings */
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.badge {
+    background-color: #e0e0e0; /* Light gray background for badges */
+    color: #333; /* Text color */
+    padding: 0.5rem 1rem; /* Padding for badges */
+    border-radius: 12px; /* Rounded corners */
+    font-size: 0.9rem; /* Font size for badges */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.badge:hover {
+    background-color: #ffd700; /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
