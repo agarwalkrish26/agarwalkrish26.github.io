@@ -274,3 +274,74 @@ section {
         grid-row: 3;
     }
 }
+
+/* Projects Section */
+.projects-title {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, auto-resizing */
+    gap: 2rem;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 2rem;
+    width: 90%; /* To keep the container responsive */
+    margin: auto; /* Center the entire container */
+}
+
+.project-card {
+    perspective: 1000px;
+    width: 100%; /* Let each card fill the container width */
+    max-width: 300px; /* Set a max width for consistent card sizes */
+    height: 300px; /* Set a fixed height for the cards */
+    position: relative; /* Position for flipping effect */
+    overflow: hidden; /* Prevent overlap */
+}
+
+.project-front,
+.project-back {
+    width: 100%;
+    height: 100%; /* Ensures both sides have the same height */
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center;
+    align-items: center;
+}
+
+.project-front img {
+    width: 100%; /* Ensure image fits within the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire card area */
+}
+
+.project-back {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: rotateY(180deg); /* Initially hide back */
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255); /* White border */
+    border-radius: 15px; /* Rounded corners */
+    box-sizing: border-box; /* Ensures the padding and border are included in the element's dimensions */
+}
+
+/* Flipping effect on hover */
+.project-card:hover .project-front {
+    transform: rotateY(180deg);
+}
+
+.project-card:hover .project-back {
+    transform: rotateY(360deg);
+}
