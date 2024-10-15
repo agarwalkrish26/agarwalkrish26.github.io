@@ -11,7 +11,10 @@
     <header>
         <nav>
             <div class="logo">Krish Agarwal</div>
-            <ul>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -30,7 +33,7 @@
     <section id="about" class="scheme-2">
         <div class="about-container">
             <div class="grid-item photo-container">
-                <img src="images/profile_photo.png" alt="Profile Photo" class="profile-photo">
+                <img src="images/profile_photo.png" alt="Profile Photo of Krish Agarwal" class="profile-photo" loading="lazy">
             </div>
             <div class="grid-item about-text">
                 <h1>About Me</h1>
@@ -95,7 +98,7 @@
         <div class="projects-container">
             <div class="project-card">
                 <div class="project-front">
-                    <img src="images/dynamic_chatbot.png" alt="Dynamic Chatbot">
+                    <img src="images/dynamic_chatbot.png" alt="Dynamic Chatbot" loading="lazy">
                 </div>
                 <div class="project-back">
                     <h3>Live Dynamic Chatbot</h3>
@@ -104,10 +107,10 @@
                     <p>● Used Langchain and OpenAI libraries to convert data into embeddings for accurate responses.</p>
                 </div>
             </div>
-    
+
             <div class="project-card">
                 <div class="project-front">
-                    <img src="images/exercise_classification.png" alt="Exercise Classification">
+                    <img src="images/exercise_classification.png" alt="Exercise Classification" loading="lazy">
                 </div>
                 <div class="project-back">
                     <h3>Exercise Classification</h3>
@@ -115,20 +118,20 @@
                     <p>● Utilized TensorFlow, Keras, YOLO v5 and CNN algorithm for model training</p>
                 </div>
             </div>
-    
+
             <div class="project-card">
                 <div class="project-front">
-                    <img src="images/photo_album.png" alt="Photo Album">
+                    <img src="images/photo_album.png" alt="Photo Album" loading="lazy">
                 </div>
                 <div class="project-back">
                     <h3>Photo Album</h3>
                     <p>Description for photo album project.</p>
                 </div>
             </div>
-    
+
             <div class="project-card">
                 <div class="project-front">
-                    <img src="images/signature_verification.png" alt="Signature Verification">
+                    <img src="images/signature_verification.png" alt="Signature Verification" loading="lazy">
                 </div>
                 <div class="project-back">
                     <h3>Signature Verification</h3>
@@ -136,10 +139,10 @@
                     <p>● Developed a mechanism for auto-cropping and mapping the signatures of individuals during the processing stage</p>
                 </div>
             </div>
-    
+
             <div class="project-card">
                 <div class="project-front">
-                    <img src="images/sld-removebg-preview.png" alt="SLD Project">
+                    <img src="images/sld-removebg-preview.png" alt="SLD Project" loading="lazy">
                 </div>
                 <div class="project-back">
                     <h3>SLD Project</h3>
@@ -154,8 +157,8 @@
     </section>
 
     <div class="social-sidebar">
-        <a href="https://www.linkedin.com/in/krishagarwal26" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/agarwalkrish26" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/krishagarwal26" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/agarwalkrish26" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
 
     <main>
@@ -163,7 +166,7 @@
     </main>
 
     <footer>
-        <!-- Add footer content -->
+        <p>&copy; 2024 Krish Agarwal. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
