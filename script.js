@@ -51,13 +51,19 @@ hamburger.addEventListener('click', () => {
     hamburger.setAttribute('aria-expanded', !expanded);
 });
 
-// Handle Project Card Clicks for Touch Devices
-const projectCards = document.querySelectorAll('.project-card');
-
 projectCards.forEach(card => {
     card.addEventListener('click', () => {
         if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
             card.classList.toggle('active');
+            const front = card.querySelector('.project-front');
+            const back = card.querySelector('.project-back');
+            if (card.classList.contains('active')) {
+                front.style.transform = 'rotateY(-180deg)';
+                back.style.transform = 'rotateY(0)';
+            } else {
+                front.style.transform = 'rotateY(0)';
+                back.style.transform = 'rotateY(180deg)';
+            }
         }
     });
 });

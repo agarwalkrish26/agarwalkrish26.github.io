@@ -347,12 +347,19 @@ section {
     font-weight: bold;
 }
 
+.projects-note {
+    font-size: 0.9em;
+    color: #ffffff; /* Light grey */
+    margin-top: -30px; /* Adjust this based on your layout */
+    margin-bottom: 20px;
+    text-align: center; /* Center it under the heading */
+}
+
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Fit project cards */
     gap: 2rem;
     justify-items: center;
-    align-items: center;
     padding: 2rem;
     width: 90%;
     margin: auto;
@@ -362,28 +369,42 @@ section {
     perspective: 1000px;
     width: 100%;
     max-width: 300px;
-    height: 300px;
+    height: 300px; /* Set a fixed height */
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Change from hidden to visible */
     cursor: pointer;
 }
 
 .project-front,
 .project-back {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 100%; /* Ensure full height */
+    position: absolute; /* Change from relative to absolute */
     backface-visibility: hidden;
     transition: transform 0.6s ease;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .project-front img {
     width: 100%;
-    height: auto;
+    height: 80%; /* Adjust as needed */
     object-fit: cover;
+}
+
+.project-summary {
+    font-size: 0.95em;
+    color: #ffffff; /* White for contrast */
+    margin-top: 10px;
+    text-align: center; /* This should already be center, but let's ensure it */
+    padding: 0.5rem;
+    width: 100%; /* Ensure it takes full width of its container */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-back {
@@ -399,14 +420,38 @@ section {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 15px;
     box-sizing: border-box;
+    overflow: hidden; /* Hide overflow */
+}
+
+.project-back-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    /* Styling for webkit-based browsers */
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 4px;
+    }
+    /* Styling for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover .project-front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 .project-card:hover .project-back {
-    transform: rotateY(360deg);
+    transform: rotateY(0);
 }
 
 @media (hover: none) and (pointer: coarse) {
