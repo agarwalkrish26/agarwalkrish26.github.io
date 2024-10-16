@@ -51,6 +51,8 @@ hamburger.addEventListener('click', () => {
     hamburger.setAttribute('aria-expanded', !expanded);
 });
 
+const projectCards = document.querySelectorAll('.project-card');
+
 projectCards.forEach(card => {
     card.addEventListener('click', () => {
         if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
@@ -66,4 +68,45 @@ projectCards.forEach(card => {
             }
         }
     });
+});
+
+// Initialize EmailJS
+(function() {
+    emailjs.init("02UrvtbLPtMKlI5Gd"); // Replace with your actual EmailJS user ID
+})();
+
+// Contact Form Submission
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Prepare the template parameters
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message
+            };
+            
+            // Send the email using EmailJS
+            console.log('Form submitted, attempting to send email');
+            emailjs.send('receive_email_portfolio', 'portfolio_contact_temp', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    alert('Thank you for your message! I will get back to you soon.');
+                    contactForm.reset();
+                }, function(error) {
+                    console.error('Error sending email:', error);
+                    alert('Oops! There was an error sending your message. Please try again later.');
+                });
+        });
+    } else {
+        console.error('Contact form not found in the DOM');
+    }
 });

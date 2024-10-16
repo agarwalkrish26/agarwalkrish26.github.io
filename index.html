@@ -6,6 +6,7 @@
     <title>Krish Agarwal - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -169,17 +170,31 @@
     </section>
     
     <section id="contact" class="scheme-2">
-        <!-- Add contact content here -->
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <p>Interested in my profile? Feel free to reach out!</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <div class="social-sidebar">
         <a href="https://www.linkedin.com/in/krishagarwal26" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/agarwalkrish26" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </div>
-
-    <main>
-        <!-- Add other sections (About, Skills, Education, Contact) here -->
-    </main>
 
     <footer>
         <p>&copy; 2024 Krish Agarwal. All rights reserved.</p>
