@@ -262,10 +262,12 @@ section {
 }
 
 .profile-photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    width: 100%; /* Adjust this value as needed */
+    max-width: 400px; /* Increase max-width to make the image larger */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
+    /* Optional: Add a transition for smooth resizing */
+    transition: width 0.3s ease;
 }
 
 .about-text {
