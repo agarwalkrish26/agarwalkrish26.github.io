@@ -74,32 +74,22 @@ nav {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 1001;
 }
 
 @media (max-width: 768px) {
-    header {
-        padding: 0.5rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
     .hamburger {
         display: block;
-        margin-right: 10px;
     }
 
     .nav-links {
         position: absolute;
-        top: 100%;
+        top: 60px; /* Adjust based on header height */
         left: 0;
         width: 100%;
         background-color: rgb(0, 115, 206);
         flex-direction: column;
         align-items: center;
         display: none;
-        padding: 1rem 0;
-        z-index: 1000;
     }
 
     .nav-links.active {
@@ -115,25 +105,28 @@ nav {
         font-size: 1.2rem;
     }
 
-    .project-card {
-        max-width: 90%;
-        height: auto;
+    /* Adjust header padding if necessary */
+    header {
+        padding: 0.5rem 1rem;
     }
 
-    .project-front img {
-        height: 70%;
+    /* Social Sidebar Adjustment */
+    .social-sidebar {
+        flex-direction: row;
+        left: 50%;
+        top: auto;
+        bottom: 20px;
+        transform: translateX(-50%);
+        border: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
     }
 
-    h1, h2, p {
-        font-size: smaller;
-        line-height: 1.4; /* Reduce line spacing */
+    .social-sidebar a {
+        color: white;
+        font-size: 20px;
     }
 }
-
-/* * {
-    outline: 1px solid red;
-} */
-
 
 /* General Section Styles */
 section {
@@ -142,7 +135,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 4rem 2rem;
     background-size: cover;
     background-position: center;
 }
@@ -338,56 +331,16 @@ section {
 @media (max-width: 768px) {
     .about-container {
         grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1rem;
     }
 
-    .photo-container {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .profile-photo {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-    }
-
-    .about-text {
-        text-align: left;
-        padding: 0 1rem;
+    .photo-container,
+    .about-text,
+    .skills-section {
+        grid-column: 1;
     }
 
     .skills-section {
-        width: 100%;
-        padding: 0 1rem;
-        margin-top: 2rem;
-    }
-
-    .badge-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        justify-content: flex-start;
-    }
-
-    .badge {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
-        white-space: nowrap;
-        margin: 0.2rem;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.9rem;
+        grid-row: 3;
     }
 }
 
@@ -427,8 +380,7 @@ section {
 .project-card {
     perspective: 1000px;
     width: 100%;
-    max-width: 250px;
-    max-height: 250px;
+    max-width: 300px;
     height: 300px; /* Set a fixed height */
     position: relative;
     overflow: visible; /* Change from hidden to visible */
@@ -542,10 +494,6 @@ footer {
         padding: 1rem;
         font-size: 0.9rem;
     }
-
-    section {
-        padding: 1.5rem 1rem;
-    }
 }
 
 /* Contact Section Styles */
@@ -609,21 +557,4 @@ footer {
 
 .submit-btn:hover {
     background-color: #555;
-}
-
-/* Add a new media query for very small devices */
-@media (max-width: 480px) {
-    .badge {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.4rem;
-    }
-
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .about-text {
-        padding: 0 0.5rem;
-    }
 }
