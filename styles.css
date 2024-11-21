@@ -78,19 +78,28 @@ nav {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .hamburger {
         display: block;
+        margin-right: 10px;
     }
 
     .nav-links {
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: rgb(0, 115, 206);
         flex-direction: column;
         align-items: center;
         display: none;
+        padding: 1rem 0;
+        z-index: 1000;
     }
 
     .nav-links.active {
@@ -329,22 +338,56 @@ section {
 @media (max-width: 768px) {
     .about-container {
         grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .photo-container {
         text-align: center;
-    }
-
-    .photo-container,
-    .about-text,
-    .skills-section {
-        grid-column: 1;
-    }
-
-    .skills-section {
-        grid-row: 3;
+        margin-bottom: 2rem;
     }
 
     .profile-photo {
-        width: 150px; /* Resize image */
-        max-width: 80%; /* Prevent overflow */
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .about-text {
+        text-align: left;
+        padding: 0 1rem;
+    }
+
+    .skills-section {
+        width: 100%;
+        padding: 0 1rem;
+        margin-top: 2rem;
+    }
+
+    .badge-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+        white-space: nowrap;
+        margin: 0.2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
     }
 }
 
@@ -566,4 +609,21 @@ footer {
 
 .submit-btn:hover {
     background-color: #555;
+}
+
+/* Add a new media query for very small devices */
+@media (max-width: 480px) {
+    .badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text {
+        padding: 0 0.5rem;
+    }
 }
