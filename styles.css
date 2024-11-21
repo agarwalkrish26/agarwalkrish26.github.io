@@ -74,6 +74,7 @@ nav {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1001;
 }
 
 @media (max-width: 768px) {
@@ -103,28 +104,6 @@ nav {
     .nav-links li a {
         color: white;
         font-size: 1.2rem;
-    }
-
-    /* Adjust header padding if necessary */
-    header {
-        padding: 0.5rem 1rem;
-    }
-
-    /* Social Sidebar Adjustment */
-    .social-sidebar {
-        flex-direction: row;
-        left: 50%;
-        top: auto;
-        bottom: 20px;
-        transform: translateX(-50%);
-        border: none;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 5px 10px;
-    }
-
-    .social-sidebar a {
-        color: white;
-        font-size: 20px;
     }
 }
 

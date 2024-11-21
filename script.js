@@ -43,12 +43,12 @@ window.addEventListener('hashchange', function() {
 
 // Toggle Hamburger Menu
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+const navLinks = document.getElementById('.nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-    hamburger.setAttribute('aria-expanded', !expanded);
+    const isExpanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !isExpanded);
 });
 
 const projectCards = document.querySelectorAll('.project-card');
