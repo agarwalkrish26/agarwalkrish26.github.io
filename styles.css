@@ -130,7 +130,7 @@ nav {
 
 /* General Section Styles */
 section {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,12 +192,22 @@ section {
 
 .social-sidebar a {
     color: #333;
-    font-size: 24px;
+    font-size: 32px;
     transition: all 0.3s ease;
 }
 
 .social-sidebar a:hover {
     color: #ffd700;
+    transform: scale(1.2);
+}
+
+.social-sidebar .cv-icon {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+}
+
+.social-sidebar a:hover .cv-icon {
     transform: scale(1.2);
 }
 
@@ -489,12 +499,17 @@ footer {
 /* Contact Section Styles */
 #contact {
     padding: 50px 0;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-container {
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 #contact h2 {
