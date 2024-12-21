@@ -3,207 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krish Agarwal - Portfolio</title>
+    <title>Portfolio | Krish Agarwal</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Krish Agarwal</div>
-            <div class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" role="button" tabindex="0">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home" class="scheme-1">
-        <div class="hero-content">
-            <h1>Hey, I'm Krish Agarwal</h1>
-            <p>(Your friendly neighbourhood data science nerd)</p>
-        </div>
-    </section>
-
-    <section id="about" class="scheme-2">
-        <div class="about-container">
-            <div class="grid-item photo-container">
-                <img src="images/profile_photo.png" alt="Profile Photo of Krish Agarwal" class="profile-photo" loading="lazy">
-            </div>
-            <div class="grid-item about-text">
-                <h1>About Me</h1>
-                <p>
-                    🧠 Pursuing Data Science because apparently, analyzing all that data is more fun than having a social life. Can't wait to unlock the secrets of the universe hidden within those spreadsheets and CSV files.
-                </p>
-                <p>
-                    📚 Always on a quest to learn and get exposed to the industry, because who needs free time and hobbies when you can drown yourself in code and algorithms? Ready to absorb all the knowledge and become the ultimate data guru.
-                </p>
-                <p>
-                    🏋️‍♂️ When I'm not crunching numbers, you'll find me doing some serious lifting at the data gym. Yes, that's right, I'm a data scientist by day and a gym enthusiast by... well, whenever I have the energy. Turns out, deadlifts and debugging have a lot in common – both require strong determination and a solid grip!
-                </p>
-            </div>
-            <div class="grid-item skills-section">
-                <h2>Concepts</h2>
-                <div class="badge-container">
-                    <span class="badge">Data Science</span>
-                    <span class="badge">Data Structures & Algorithms</span>
-                    <span class="badge">Generative AI</span>
-                    <span class="badge">Prompt Engineering</span>
-                    <span class="badge">Automation</span>
-                    <span class="badge">Object-Oriented Programming</span>
-                    <span class="badge">Machine Learning</span>
-                    <span class="badge">Deep Learning</span>
-                    <span class="badge">Databases</span>
-                    <span class="badge">Image Analytics</span>
-                    <span class="badge">Software Engineering</span>
-                    <span class="badge">Full Stack Development</span>
-                    <span class="badge">Operating Systems</span>
-                    <span class="badge">Statistics</span>
-                    <span class="badge">Mathematics</span>
-                </div>
-            </div>
-            <div class="grid-item skills-section">
-                <h2>Tools/Frameworks</h2>
-                <div class="badge-container">
-                    <span class="badge">Python</span>
-                    <span class="badge">R</span>
-                    <span class="badge">HTML5 - CSS</span>
-                    <span class="badge">JavaScript</span>
-                    <span class="badge">GithubPages</span>
-                    <span class="badge">PythonAnywhere</span>
-                    <span class="badge">Render</span>
-                    <span class="badge">Postgres</span>
-                    <span class="badge">MySQL</span>
-                    <span class="badge">MongoDB</span>
-                    <span class="badge">Keras</span>
-                    <span class="badge">Plotly</span>
-                    <span class="badge">PyTorch</span>
-                    <span class="badge">TensorFlow</span>
-                    <span class="badge">GitHub</span>
-                    <span class="badge">Git</span>
-                    <span class="badge">Power Bi</span>
-                    <span class="badge">Postman</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="scheme-1">
-        <h1 class="projects-title">Projects</h1>
-        <p class="projects-note">(Click/Hover to see more details)</p>
-        <div class="projects-container">
-            <div class="project-card">
-                <div class="project-front">
-                    <img src="images/dynamic_chatbot.png" alt="Dynamic Chatbot" loading="lazy">
-                    <p class="project-summary">Real-time chatbot with web scraping for dynamic responses.</p> <!-- One-liner description -->
-                </div>
-                <div class="project-back">
-                    <div class="project-back-content">
-                        <h3>Live Dynamic Chatbot</h3>
-                        <p>● Developed a chatbot that scrapes web content and generates context-based answers in real-time.</p>
-                        <p>● Created a local vector database (ChromaDB) for efficient storage and retrieval of embeddings.</p>
-                        <p>● Used Langchain and OpenAI libraries to convert data into embeddings for accurate responses.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-front">
-                    <img src="images/exercise_classification.png" alt="Exercise Classification" loading="lazy">
-                    <p class="project-summary">Image classification pipeline for exercise types using CNN.</p> <!-- One-liner description -->
-                </div>
-                <div class="project-back">
-                    <div class="project-back-content">
-                        <h3>Exercise Classification</h3>
-                        <p>● Originated a comprehensive ML pipeline for classifying images of hand-stands, push-ups, and crunches</p>
-                        <p>● Utilized TensorFlow, Keras, YOLO v5 and CNN algorithm for model training</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-front">
-                    <img src="images/photo_album.png" alt="Photo Album" loading="lazy">
-                    <p class="project-summary">Interactive digital album for organizing and viewing photos.</p> <!-- One-liner description -->
-                </div>
-                <div class="project-back">
-                    <div class="project-back-content">
-                        <h3>Photo Album</h3>
-                        <p>• Created a web application using Flask to display a photo album organized in a grid layout with hover effects</p>
-                        <p>• Incorporated HTML templates to render static content and CSS for styling and responsiveness</p>
-                        <p>• Implemented routes for navigating through the album and individual photos</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-front">
-                    <img src="images/signature_verification.png" alt="Signature Verification" loading="lazy">
-                    <p class="project-summary">Automated signature verification system with auto-cropping.</p> <!-- One-liner description -->
-                </div>
-                <div class="project-back">
-                    <div class="project-back-content">
-                        <h3>Signature Verification</h3>
-                        <p>● Set up a web-based system that verifies the signature of users based on previously collected signatures</p>
-                        <p>● Developed a mechanism for auto-cropping and mapping the signatures of individuals during the processing stage</p>
-                    </div> 
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-front">
-                    <img src="images/sld-removebg-preview.png" alt="Estimate SLD Project" loading="lazy">
-                    <p class="project-summary">Estimating Sonic Layer Depth (oceanography)</p> <!-- One-liner description -->
-                </div>
-                <div class="project-back">
-                    <div class="project-back-content">
-                        <h3>Estimating Sonic Layer Depth from Satellite Observations</h3>
-                        <p>● Developed a model to estimate Sonic Layer Depth in the Indian Ocean using satellite observations and Argo float data, focusing on achieving high accuracy.</p>
-                        <p>● Conducted data wrangling and analysis of both in-situ and satellite data using Python and CDO tools.</p>
-                        <p>● After training and tuning multiple models, the XGBoost Regressor emerged as the most accurate for the task.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="scheme-2">
-        <div class="contact-container">
-            <h2>Get in Touch</h2>
-            <p>Interested in my profile? Feel free to reach out!</p>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <div class="social-sidebar">
-        <a href="https://www.linkedin.com/in/krishagarwal26" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/agarwalkrish26" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="CV_Krish Agarwal.pdf" download aria-label="Download CV"><img src="images/cv_icon.png" alt="CV" class="cv-icon"></a>
+    <div class="loader">
+        <img src="icons/loading.gif" alt="Loading...">
     </div>
 
-    <footer>
-        <p>&copy; 2024 Krish Agarwal. All rights reserved.</p>
-    </footer>
+    <nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#home"><img src="icons/home-icon.png" alt="Home">Home</a></li>
+            <li><a href="#about"><img src="icons/about-icon.png" alt="About">About</a></li>
+            <li><a href="#projects"><img src="icons/project-icon.png" alt="Projects">Projects</a></li>
+            <li><a href="#experience"><img src="icons/experience-icon.jpg" alt="Experience">Experience</a></li>
+            <li><a href="#contact"><img src="icons/contact-icon.jpg" alt="Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Krish Agarwal</h1>
+                <p class="hero-subtitle">Your friendly neighborhood data science nerd</p>
+            </div>
+            <div class="hero-image">
+                <img src="images/spidey.gif" alt="Spiderman Animation">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div>
+                <img src="images/profile_photo.png" alt="Your Profile" class="profile-img">
+            </div>
+            <div>
+                <p>Your detailed description goes here. Talk about your background, interests, and what drives you.</p>
+                <div class="badge-container">
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">React</span>
+                    <span class="badge">Node.js</span>
+                    <!-- Add more badges as needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Project description goes here.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Project description goes here.</p>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-item">
+            <h3>Company Name</h3>
+            <p>Position • Duration</p>
+            <p>Description of your role and achievements.</p>
+        </div>
+        <!-- Add more experience items as needed -->
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <script src="script.js"></script>
 </body>

@@ -1,112 +1,67 @@
-function updateColorScheme() {
-    const header = document.querySelector('header');
-    const sections = document.querySelectorAll('section');
-    const scrollY = window.scrollY;
-    const headerHeight = header.offsetHeight;
+// Add this at the beginning of your script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Add 'loaded' class to body after a slight delay
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+        // Remove loader
+        const loader = document.querySelector('.loader');
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }, 1000); // Adjust time as needed
+});
 
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop - headerHeight;
-        const sectionHeight = section.offsetHeight;
-
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            if (section.classList.contains('scheme-1')) {
-                header.style.backgroundColor = 'white';
-                header.style.color = 'rgb(0, 115, 206)';
-                document.querySelectorAll('nav ul li a').forEach(link => {
-                    link.style.color = 'rgb(0, 115, 206)';
-                });
-            } else if (section.classList.contains('scheme-2')) {
-                header.style.backgroundColor = 'rgb(0, 115, 206)';
-                header.style.color = 'white';
-                document.querySelectorAll('nav ul li a').forEach(link => {
-                    link.style.color = 'white';
-                });
-            }
-        }
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-}
-
-window.addEventListener('load', function() {
-    updateColorScheme();
-    // Trigger scroll event to ensure correct scheme on load
-    window.scrollBy(0, 1);
-    window.scrollBy(0, -1);
 });
 
-window.addEventListener('scroll', updateColorScheme);
-
-// Optional: Trigger updateColorScheme on hash change (when clicking nav links)
-window.addEventListener('hashchange', function() {
-    // Use setTimeout to allow the browser to jump to the section before updating
-    setTimeout(updateColorScheme, 100);
-});
-
-// Toggle Hamburger Menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+// Hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-    hamburger.setAttribute('aria-expanded', !expanded);
 });
 
-const projectCards = document.querySelectorAll('.project-card');
-
-projectCards.forEach(card => {
-    card.addEventListener('click', () => {
-        if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
-            card.classList.toggle('active');
-            const front = card.querySelector('.project-front');
-            const back = card.querySelector('.project-back');
-            if (card.classList.contains('active')) {
-                front.style.transform = 'rotateY(-180deg)';
-                back.style.transform = 'rotateY(0)';
-            } else {
-                front.style.transform = 'rotateY(0)';
-                back.style.transform = 'rotateY(180deg)';
-            }
-        }
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
     });
 });
 
-// Initialize EmailJS
-(function() {
-    emailjs.init("02UrvtbLPtMKlI5Gd"); // Replace with your actual EmailJS user ID
-})();
+// Highlight active section in navigation
+const sections = document.querySelectorAll('section');
+const navLinks_ = document.querySelectorAll('.nav-links a');
 
-// Contact Form Submission
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+const observerOptions = {
+    threshold: 0.3 // Trigger when 30% of section is visible
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Remove active class from all links
+            navLinks_.forEach(link => link.classList.remove('active'));
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Prepare the template parameters
-            const templateParams = {
-                from_name: name,
-                from_email: email,
-                message: message
-            };
-            
-            // Send the email using EmailJS
-            console.log('Form submitted, attempting to send email');
-            emailjs.send('receive_email_portfolio', 'portfolio_contact_temp', templateParams)
-                .then(function(response) {
-                    console.log('Email sent successfully:', response);
-                    alert('Thank you for your message! I will get back to you soon.');
-                    contactForm.reset();
-                }, function(error) {
-                    console.error('Error sending email:', error);
-                    alert('Oops! There was an error sending your message. Please try again later.');
-                });
-        });
-    } else {
-        console.error('Contact form not found in the DOM');
-    }
-});
+            // Add active class to corresponding nav link
+            const activeId = entry.target.id;
+            const correspondingLink = document.querySelector(`.nav-links a[href="#${activeId}"]`);
+            if (correspondingLink) {
+                correspondingLink.classList.add('active');
+            }
+        }
+    });
+}, observerOptions);
+
+// Observe all sections
+sections.forEach(section => observer.observe(section));
