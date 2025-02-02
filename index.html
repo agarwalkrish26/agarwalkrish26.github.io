@@ -42,16 +42,45 @@
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-container">
-            <div>
-                <img src="images/profile_photo.png" alt="Your Profile" class="profile-img">
+            <div class="profile-slider">
+                <div class="slider-container">
+                    <img src="images/profile_photo.png" alt="Profile Photo" class="profile-img">
+                    <!-- <img src="images/profile_photo2.jpeg" alt="Profile Photo" class="profile-img">
+                    <img src="images/profile_photo3.jpeg" alt="Profile Photo" class="profile-img">
+                    <img src="images/profile_photo4.jpg" alt="Profile Photo" class="profile-img"> -->
+                </div>
             </div>
             <div>
-                <p>Your detailed description goes here. Talk about your background, interests, and what drives you.</p>
+                <p>
+                    🧠 Pursuing Data Science because apparently, analyzing all that data is more fun than having a social life. Can't wait to unlock the secrets of the universe hidden within those spreadsheets and CSV files.
+                </p>
+                <br>
+                <p>
+                    📚 Always on a quest to learn and get exposed to the industry, because who needs free time and hobbies when you can drown yourself in code and algorithms? Ready to absorb all the knowledge and become the ultimate data guru.
+                </p>
+                <br>
+                <p>
+                    🏋️‍♂️ When I'm not crunching numbers, you'll find me doing some serious lifting at the data gym. Yes, that's right, I'm a data scientist by day and a gym enthusiast by... well, whenever I have the energy. Turns out, deadlifts and debugging have a lot in common – both require strong determination and a solid grip!
+                </p>
+                <br>
                 <div class="badge-container">
-                    <span class="badge">JavaScript</span>
-                    <span class="badge">React</span>
-                    <span class="badge">Node.js</span>
-                    <!-- Add more badges as needed -->
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">
+                        Data Science
+                    </span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Data Structures & Algorithms</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Generative AI</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Prompt Engineering</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Automation</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Object-Oriented Programming</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Machine Learning</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Deep Learning</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Databases</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Image Analytics</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Software Engineering</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Full Stack Development</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Operating Systems</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Statistics</span>
+                    <span class="badge" onclick="window.location.href='https://www.youtube.com/watch?v=BBJa32lCaaY'" style="cursor: pointer">Mathematics</span>
                 </div>
             </div>
         </div>
@@ -59,45 +88,125 @@
 
     <section id="projects">
         <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">(Click/Hover to see more details)</p>
         <div class="projects-grid">
             <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Project description goes here.</p>
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <img src="images/dynamic_chatbot.png" alt="Live Dynamic Chatbot">
+                        <h3>Real-Time Chatbot with web-scrpaing for dynamic context</h3>
+                    </div>
+                    <div class="project-card-back">
+                        <div class="project-description">
+                            <h3>Live Dynamic Chatbot</h3>
+                            <p>● Developed a chatbot that scrapes web content and generates context-based answers in real-time.</p>
+                            <p>● Created a local vector database (ChromaDB) for efficient storage and retrieval of embeddings.</p>
+                            <p>● Used Langchain and OpenAI libraries to convert data into embeddings for accurate responses.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Project description goes here.</p>
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <img src="images/exercise_classification.png" alt="Exercise Classification">
+                        <h3>Image Classification pipeline for exercise types using CNN</h3>
+                    </div>
+                    <div class="project-card-back">
+                        <div class="project-description">
+                            <h3>Exercise Classification</h3>
+                            <p>● Originated a comprehensive ML pipeline for classifying images of hand-stands, push-ups, and crunches</p>
+                            <p>● Utilized TensorFlow, Keras, YOLO v5 and CNN algorithm for model training</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Add more project cards as needed -->
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <img src="images/photo_album.png" alt="Photo Album">
+                        <h3>Interactive digital album for organizing and viewing photos</h3>
+                    </div>
+                    <div class="project-card-back">
+                        <div class="project-description">
+                            <h3>Photo Album</h3>
+                            <p>● Created a web application using Flask to display a photo album organized in a grid layout with hover effects</p>
+                            <p>● Incorporated HTML templates to render static content and CSS for styling and responsiveness</p>
+                            <p>● Implemented routes for navigating through the album and individual photos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-card-front">
+                        <img src="images/signature_verification.png" alt="Signature Verification">
+                        <h3>Automated Signature Verification system with auto-cropping</h3>
+                    </div>
+                    <div class="project-card-back">
+                        <div class="project-description">
+                            <h3>Signature Verification</h3>
+                            <p>● Set up a web-based system that verifies the signature of users based on previously collected signatures</p>
+                            <p>● Developed a mechanism for auto-cropping and mapping the signatures of individuals during the processing stage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="experience-item">
-            <h3>Company Name</h3>
-            <p>Position • Duration</p>
-            <p>Description of your role and achievements.</p>
+            <h3>DXFactor Solutions Pvt Ltd </h3>
+            <p>Data Science Intern ~~~ Sep'24 - Present</p>
+            <p>● Scaled up an existing in-house AI code suggestion tool to a full-fledged AI code generation tool</p>
+            <p>● Developing, integrating and maintaining a common GenAI based bot framework for multi-functionality</p>
+            <p>● Developing automated growth and marketing tools on social media platforms (LinkedIn, Reddit, etc.)</p>
         </div>
-        <!-- Add more experience items as needed -->
+        <div class="experience-item">
+            <h3>Space Applications Centre, ISRO</h3>
+            <p>Researcher ~~~ Jan'24 - Jul'24</p>
+            <p>● Collaborated with the oceanography department to reconstruct the sonic layer depth from surface parameters</p>
+            <p>● Responsible for aggregating, analyzing, visualizing and modelling large-scale data into compactible data</p>
+            <p>● Developed an open-source module with customizability and easy visualizations</p>
+        </div>
+        <div class="experience-item">
+            <h3>Hindustan Coca Cola Beverages Private Limited</h3>
+            <p>IT Intern ~~~ Jul'23 - Aug'23</p>
+            <p>● Explored Image Recognition integration into operations</p>
+            <p>● Established an object detection model akin to an existing AI model</p>
+        </div>
+        <div class="experience-item">
+            <h3>F(X) Data Labs PVT LTD</h3>
+            <p>ML Intern ~~~ Jul'22 - Aug'22</p>
+            <p>● Researched domain-related subjects and worked on client projects</p>
+            <p>● Specialized in Supervised Learning, emphasizing on Classification and Regression models</p>
+            <p>● Collaborated on an NLP-focused client query project with seasoned team members</p>
+        </div>
     </section>
 
     <section id="contact">
         <h2 class="section-title">Contact Me</h2>
-        <form class="contact-form">
+        <form id="contact-form" class="contact-form">
             <div class="form-group">
-                <input type="text" placeholder="Name" required>
+                <input type="text" id="name" placeholder="Name" required>
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email" required>
+                <input type="email" id="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <textarea placeholder="Message" rows="5" required></textarea>
+                <textarea id="message" placeholder="Message" rows="5" required></textarea>
             </div>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
+    <div class="footer-container">
+        <p>Developed with 💚 by Krish Agarwal</p>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
